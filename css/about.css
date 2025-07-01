@@ -1,0 +1,613 @@
+/* About Hero Section with Video Background */
+.about-hero {
+    position: relative;
+    height: 80vh;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 80px;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Didot', serif;
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+/* Fallback for browsers that don't support video */
+.no-video .video-background video {
+    display: none;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-hero {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        height: 50vh;
+        min-height: 300px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+/* About Content Section */
+.about-section {
+    padding: 0 5% 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.about-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-family: 'Didot', serif;
+    font-size: 2.5rem;
+    color: #2c2c2c;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.03);
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.about-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.about-list i {
+    color: #f4a9a9;
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+/* Craftsmanship Video Section */
+.craftsmanship-video {
+    padding: 80px 5%;
+    background: #f9f5f0;
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+}
+
+.video-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px;
+    color: white;
+    text-align: left;
+    z-index: 2;
+}
+
+.video-content h2 {
+    font-family: 'Didot', serif;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.video-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* Play Button for Mobile */
+.video-play-button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(184, 134, 11, 0.8);
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 24px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-container video {
+        /* On mobile, we'll pause autoplay and show a play button */
+        /* Autoplay will only work if user interacts */
+        opacity: 0.7;
+    }
+    
+    .video-play-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .video-content h2 {
+        font-size: 2rem;
+    }
+    
+    .video-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-content {
+        padding: 20px;
+    }
+    
+    .video-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .video-content p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Design Process */
+.design-process {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-family: 'Didot', serif;
+    font-size: 2.5rem;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.step-image {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.step-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.step:hover .step-image img {
+    transform: scale(1.05);
+}
+
+.step h3 {
+    font-family: 'Didot', serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.step p {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Our Team Section - Compact Row Layout */
+.our-team {
+    padding: 60px 5%;
+    background: #f9f5f0;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-family: 'Didot', serif;
+    font-size: 2.5rem;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.team-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto;
+    padding: 20px 0;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.team-row::-webkit-scrollbar {
+    display: none; /* For Chrome/Safari */
+}
+
+.designer-card {
+    flex: 0 0 280px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.designer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.designer-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #f4a9a9;
+}
+
+.designer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.designer-info {
+    text-align: left;
+    flex: 1;
+}
+
+.designer-info h3 {
+    font-family: 'Didot', serif;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.designer-info p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.designer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.designer-social a {
+    color: #f4a9a9;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.designer-social a:hover {
+    color: #f4a9a9;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .team-row {
+        justify-content: flex-start;
+    }
+    
+    .designer-card {
+        flex: 0 0 260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .designer-card {
+        flex: 0 0 240px;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .designer-image {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .team-row {
+        gap: 15px;
+    }
+    
+    .designer-card {
+        flex: 0 0 220px;
+    }
+    
+    .designer-info h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Instagram Gallery */
+.instagram-gallery {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* exactly 8 columns */
+    gap: 1px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    opacity: 0.8;
+    transform: scale(1.01);
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-hero .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .about-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .about-container.reverse {
+        flex-direction: column;
+    }
+    
+    .about-image, .about-text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        height: 50vh;
+    }
+    
+    .about-hero .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-hero .hero-content p {
+        font-size: 1.2rem;
+    }
+    
+    .video-content {
+        padding: 20px;
+    }
+    
+    .video-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-hero {
+        height: 40vh;
+    }
+    
+    .about-hero .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+}

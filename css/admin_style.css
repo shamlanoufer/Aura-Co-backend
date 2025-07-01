@@ -1,0 +1,515 @@
+@import url('components.css');
+
+
+.btn,
+.delete-btn,
+.option-btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .7rem 3rem;
+    font-size: 1.7rem;
+    color: #e4d9bc;
+    border-radius: .5rem;
+    text-transform: capitalize;
+    background: #b46e1e;
+    cursor: pointer;
+    text-align: center;
+
+}
+.btn{
+    background-color:#b46e1e;
+}
+
+.delete-btn{
+    background-color: #b46e1e;
+}
+.option-btn{
+    background-color: #b46e1e;
+}
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover {
+    background-color: #c32b2b;
+    letter-spacing: .2rem;
+}
+
+.flex-btn{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.flex-btn >*{
+    flex: 1;
+}
+/* Admin Navigation Bar - Aura&Co Style */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid #f0e6e6;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar a {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5rem;
+    color: #2c2c2c;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #f4a9a9;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #f4a9a9;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 70%;
+}
+
+/* Active link styling */
+.navbar a.active {
+    color: #f4a9a9;
+}
+
+.navbar a.active::after {
+    width: 70%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 5%;
+        position: relative;
+    }
+
+    .navbar a {
+        display: none;
+        width: 100%;
+        padding: 1rem 0;
+        margin: 0;
+        border-bottom: 1px solid #f0e6e6;
+    }
+
+    .navbar a:first-child {
+        display: block;
+        border-bottom: none;
+        padding: 0.5rem 0;
+    }
+
+    .navbar.active a {
+        display: block;
+    }
+
+    /* Hamburger menu icon (optional) */
+    .navbar::before {
+        content: '\f0c9';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        font-size: 1.8rem;
+        color: #2c2c2c;
+        position: absolute;
+        right: 5%;
+        top: 1rem;
+        cursor: pointer;
+    }
+
+    .navbar.active::before {
+        content: '\f00d';
+    }
+}
+
+/* For larger screens */
+@media (min-width: 1200px) {
+    .navbar {
+        padding: 1.5rem 10%;
+    }
+}
+.dashboard .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+   gap:1.5rem;
+   align-items: flex-start;
+}
+
+.dashboard .box-container .box{
+   padding:2rem;
+   text-align: center;
+   border: 1px solid #f0e6e6;
+   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+   background-color: white;
+   border-radius: 8px;
+   transition: all 0.3s ease;
+}
+
+.dashboard .box-container .box:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.dashboard .box-container .box h3{
+   font-size: 3.5rem;
+   color: #2c2c2c;
+   font-family: 'Didot', serif;
+   margin-bottom: 1rem;
+}
+
+.dashboard .box-container .box p{
+   font-size: 1.8rem;
+   background-color: #f9f5f0;
+   color: #666;
+   padding:1.5rem;
+   margin:1rem 0;
+   border: 1px solid #f0e6e6;
+   border-radius: 8px;
+}
+
+.add-products form{
+   max-width: 70rem;
+   padding:3rem;
+   margin:0 auto;
+   text-align: center;
+   border: 1px solid #f0e6e6;
+   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+   background-color: white;
+   border-radius: 8px;
+}
+
+.add-products form .flex{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+}
+
+.add-products form .flex .inputBox{
+   width: 48%;
+}
+
+.add-products form .box{
+   width: 100%;
+   margin:1rem 0;
+   padding:1.2rem 1.4rem;
+   font-size: 1.6rem;
+   color: #2c2c2c;
+   border-radius: 8px;
+   background-color: #f9f5f0;
+   border: 1px solid #f0e6e6;
+   transition: all 0.3s ease;
+}
+
+.add-products form .box:focus {
+   border-color: #f4a9a9;
+   box-shadow: 0 0 0 3px rgba(244, 169, 169, 0.2);
+}
+
+.add-products form textarea{
+   height: 20rem;
+   resize: none;
+}
+
+.show-products{
+   padding-top: 0;
+}
+
+.show-products .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:2rem;
+   align-items: flex-start;
+   justify-content:center;
+}
+
+.show-products .box-container .box{
+   text-align: center;
+   border: 1px solid #f0e6e6;
+   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+   background-color: white;
+   border-radius: 8px;
+   padding:2rem;
+   position: relative;
+   transition: all 0.3s ease;
+}
+
+.show-products .box-container .box:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.show-products .box-container .box .price{
+   position: absolute;
+   top:1rem; left:1rem;
+   padding:0.8rem 1.5rem;
+   font-size: 1.8rem;
+   color: white;
+   background-color: #f4a9a9;
+   border-radius: 30px;
+   font-weight: 500;
+}
+
+.show-products .box-container .box img{
+   width: 100%;
+   height: 25rem;
+   object-fit: cover;
+   margin-bottom: 1.5rem;
+   border-radius: 4px;
+}
+
+.show-products .box-container .box .name{
+   margin:.5rem 0;
+   font-size: 2rem;
+   color: #2c2c2c;
+   font-family: 'Didot', serif;
+}
+
+.show-products .box-container .box .cat{
+   font-size: 1.6rem;
+   color: #f4a9a9;
+   margin-bottom: 1rem;
+}
+
+.show-products .box-container .box .details{
+   padding-top: 1rem;
+   font-size: 1.5rem;
+   line-height: 1.6;
+   color: #666;
+}
+
+.update-product form{
+   max-width: 50rem;
+   padding:3rem;
+   margin:0 auto;
+   text-align: center;
+   border: 1px solid #f0e6e6;
+   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+   background-color: white;
+   border-radius: 8px;
+}
+
+.update-product form img{
+   height: 25rem;
+   width: 100%;
+   object-fit: cover;
+   margin-bottom: 2rem;
+   border-radius: 4px;
+}
+
+.update-product form .box{
+   width: 100%;
+   border: 1px solid #f0e6e6;
+   background-color: #f9f5f0;
+   border-radius: 8px;
+   padding:1.4rem 1.6rem;
+   font-size: 1.6rem;
+   color: #2c2c2c;
+   margin:1rem 0;
+   transition: all 0.3s ease;
+}
+
+.update-product form .box:focus {
+   border-color: #f4a9a9;
+   box-shadow: 0 0 0 3px rgba(244, 169, 169, 0.2);
+}
+
+.placed-orders .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:2rem;
+   align-items: flex-start;
+   justify-content:center;
+}
+
+.placed-orders .box-container .box{
+   border: 1px solid #f0e6e6;
+   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+   background-color: white;
+   border-radius: 8px;
+   padding:2.5rem;
+   transition: all 0.3s ease;
+}
+
+.placed-orders .box-container .box:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.placed-orders .box-container .box p{
+   margin-bottom: 1.5rem;
+   line-height: 1.6;
+   font-size: 1.6rem;
+   color: #666;
+}
+
+.placed-orders .box-container .box p span{
+   color: #f4a9a9;
+   font-weight: 500;
+}
+
+.placed-orders .box-container .box .drop-down{
+   width: 100%;
+   padding:1.2rem 1.4rem;
+   font-size: 1.6rem;
+   border: 1px solid #f0e6e6;
+   border-radius: 8px;
+   background-color: #f9f5f0;
+   margin-bottom: 1rem;
+   transition: all 0.3s ease;
+}
+
+.placed-orders .box-container .box .drop-down:focus {
+   border-color: #f4a9a9;
+   box-shadow: 0 0 0 3px rgba(244, 169, 169, 0.2);
+}
+
+.user-accounts .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:2rem;
+   align-items: flex-start;
+   justify-content:center;
+}
+
+.user-accounts .box-container .box{
+   border: 1px solid #f0e6e6;
+   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+   background-color: white;
+   border-radius: 8px;
+   padding:2.5rem;
+   text-align: center;
+   transition: all 0.3s ease;
+}
+
+.user-accounts .box-container .box:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.user-accounts .box-container .box img{
+   height: 15rem;
+   width: 15rem;
+   border-radius: 50%;
+   object-fit: cover;
+   margin-bottom: 1.5rem;
+   border: 3px solid #f4a9a9;
+}
+
+.user-accounts .box-container .box p{
+   line-height: 1.6;
+   padding:.5rem 0;
+   font-size: 1.6rem;
+   color: #666;
+}
+
+.user-accounts .box-container .box p span{
+   color: #f4a9a9;
+   font-weight: 500;
+}
+
+.messages .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:2rem;
+   align-items: flex-start;
+   justify-content:center;
+}
+
+.messages .box-container .box{
+   border: 1px solid #f0e6e6;
+   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+   background-color: white;
+   border-radius: 8px;
+   padding:2.5rem;
+   transition: all 0.3s ease;
+}
+
+.messages .box-container .box:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.messages .box-container .box p{
+   line-height: 1.6;
+   padding:.5rem 0;
+   font-size: 1.6rem;
+   color: #666;
+}
+
+.messages .box-container .box p span{
+   color: #f4a9a9;
+   font-weight: 500;
+}
+
+/* Buttons */
+.btn {
+   display: inline-block;
+   padding: 1.2rem 2.5rem;
+   background: #f4a9a9;
+   color: white;
+   text-decoration: none;
+   font-weight: 500;
+   letter-spacing: 0.5px;
+   border-radius: 30px;
+   transition: all 0.3s ease;
+   border: none;
+   cursor: pointer;
+   font-size: 1.6rem;
+}
+
+.btn:hover {
+   background: #e89c9c;
+   transform: translateY(-3px);
+   box-shadow: 0 5px 15px rgba(244, 169, 169, 0.3);
+}
+
+.btn-outline {
+   background: transparent;
+   border: 1px solid #f4a9a9;
+   color: #f4a9a9;
+}
+
+.btn-outline:hover {
+   background: #f4a9a9;
+   color: white;
+}
+
+@media (max-width:768px){
+   .add-products form .flex .inputBox{
+      width: 100%;
+   }
+}
+
+@media (max-width:450px){
+   .show-products .box-container,
+   .placed-orders .box-container,
+   .user-accounts .box-container,
+   .messages .box-container {
+      grid-template-columns: 1fr;
+   }
+
+   .update-product form img{
+      height: auto;
+      width: 100%;
+   }
+}

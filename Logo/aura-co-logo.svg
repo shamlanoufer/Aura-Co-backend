@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Elegant, minimalist text-based logo similar to KIRSTIN ASH -->
+  <defs>
+    <linearGradient id="subtleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="100%" stop-color="#222222" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main brand name with elegant spacing -->
+  <text x="50" y="100" font-family="'Didot', serif" font-size="34" font-weight="400" letter-spacing="8" fill="url(#subtleGradient)">
+    A U R A &amp; C O
+  </text>
+  
+  <!-- Optional subtle line underneath -->
+  <line x1="50" y1="120" x2="350" y2="120" stroke="#000000" stroke-width="0.5" opacity="0.3" />
+  
+  <!-- Optional "JEWELRY" descriptor -->
+  <text x="170" y="145" font-family="'Didot', serif" font-size="10" font-weight="300" letter-spacing="3" fill="#666666">
+    JEWELRY
+  </text>
+</svg>

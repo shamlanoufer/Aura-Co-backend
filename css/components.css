@@ -1,0 +1,709 @@
+@import url('https://fonts.googleapis.com/css2?family=Didot&family=Rubik:wght@300;400;500;600&display=swap');
+
+/* =============================
+   Aura&Co Component Styles
+   Unified with main site style
+   ============================= */
+
+/* Root Variables - Aura&Co Palette */
+:root {
+   --primary: #f4a9a9;
+   --secondary: #f9f5f0;
+   --black: #2c2c2c;
+   --light-color: #666;
+   --white: #fff;
+   --light-bg: #f9f5f0;
+   --border: 1px solid #f0e6e6;
+   --box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+   --font-primary: 'Didot', serif;
+   --font-secondary: 'Montserrat', sans-serif;
+}
+
+/* Global Reset & Font */
+*{
+   font-family: var(--font-secondary);
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   color:var(--black);
+}
+
+*::selection{
+   background-color: var(--primary);
+   color:var(--white);
+}
+
+*::-webkit-scrollbar{
+   height: .5rem;
+   width: .5rem;
+}
+
+*::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb{
+   background-color: var(--primary);
+   border-radius: 5px;
+}
+
+body{
+   background-color: var(--light-bg);
+   line-height: 1.6;
+}
+
+html{
+   font-size: 62.5%;
+   overflow-x: hidden;
+   scroll-behavior: smooth;
+   scroll-padding-top: 6.5rem;
+}
+
+/* Section Layout */
+section{
+   padding:5rem 2rem;
+   max-width: 1200px;
+   margin:0 auto;
+}
+
+.disabled{
+   user-select: none;
+   pointer-events: none;
+   opacity: .5;
+}
+
+/* =============================
+   Buttons
+   ============================= */
+.btn,
+.delete-btn,
+.option-btn{
+   display: inline-block;
+   border-radius: 30px;
+   color: var(--white);
+   font-size: 1.6rem;
+   padding: 1.3rem 3rem;
+   text-transform: capitalize;
+   cursor: pointer;
+   text-align: center;
+   transition: all 0.3s ease;
+   font-weight: 500;
+   letter-spacing: 0.5px;
+   background: var(--primary);
+   margin-top: 1.5rem;
+   box-shadow: none;
+   border: none;
+}
+.btn:hover, .option-btn:hover {
+   background: #e89c9c;
+   transform: translateY(-3px);
+   box-shadow: 0 5px 15px rgba(244, 169, 169, 0.3);
+}
+.delete-btn {
+   background: #e74c3c;
+}
+.delete-btn:hover {
+   background: #c0392b;
+}
+
+/* Wishlist Button */
+.wishlist-btn {
+   background: var(--primary);
+   color: var(--white);
+   border: none;
+   border-radius: 30px;
+   padding: 10px 22px 10px 18px;
+   font-size: 1.1rem;
+   font-family: var(--font-secondary);
+   font-weight: 600;
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+   cursor: pointer;
+   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+   box-shadow: none;
+   outline: none;
+   margin: 0.5rem 0 0 0;
+}
+.wishlist-btn i {
+   font-size: 1.2em;
+   margin-right: 6px;
+}
+.wishlist-btn:hover, .wishlist-btn:active {
+   background: #e89c9c;
+   color: #fff;
+}
+
+/* =============================
+   Titles & Messages
+   ============================= */
+.title, h1.title {
+   text-align: center;
+   margin-bottom: 3rem;
+   color: var(--black);
+   font-size: 3.5rem;
+   font-family: var(--font-primary);
+   letter-spacing: 1px;
+   text-transform: none;
+}
+.message {
+   position: sticky;
+   top: 0;
+   max-width: 1200px;
+   margin: 0 auto;
+   background-color: var(--light-bg);
+   padding: 2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1.5rem;
+   z-index: 10000;
+   border-bottom: var(--border);
+}
+.message span {
+   font-size: 1.6rem;
+   color: var(--black);
+}
+.message i {
+   font-size: 2rem;
+   cursor: pointer;
+   color: var(--primary);
+}
+.message i:hover {
+   color: var(--black);
+}
+.empty {
+   padding: 2rem;
+   background: var(--white);
+   color: var(--primary);
+   border-radius: 8px;
+   border: var(--border);
+   font-size: 1.6rem;
+   text-align: center;
+   box-shadow: var(--box-shadow);
+   text-transform: none;
+}
+
+/* =============================
+   Profile Dropdown
+   ============================= */
+.profile .option-btn, .profile .btn {
+   width: 90%;
+   margin: 16px auto 0 auto;
+   display: block;
+   background: var(--primary);
+   color: #fff;
+   font-weight: bold;
+   font-size: 1.3rem;
+   border: none;
+   border-radius: 40px;
+   padding: 22px 0;
+   text-align: center;
+   box-shadow: none;
+   transition: background 0.2s, color 0.2s, transform 0.1s;
+   outline: none;
+   letter-spacing: 0.5px;
+}
+.profile .option-btn:hover, .profile .btn:hover,
+.profile .option-btn:active, .profile .btn:active {
+   background: #e89c9c;
+   color: #fff;
+   transform: translateY(-2px);
+}
+.profile img {
+   border: 3px solid var(--primary);
+   border-radius: 50%;
+   width: 80px;
+   height: 80px;
+   object-fit: cover;
+   margin: 0 auto 10px auto;
+   display: block;
+}
+.profile p {
+   font-family: var(--font-primary);
+   font-size: 1.2rem;
+   color: var(--black);
+   text-align: center;
+   margin-bottom: 10px;
+   text-transform: lowercase;
+}
+
+/* =============================
+   Utility Classes
+   ============================= */
+.flex-btn {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+}
+.flex-btn > * {
+   flex: 1;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 991px) {
+   html { font-size: 55%; }
+}
+@media (max-width: 768px) {
+   .profile .option-btn, .profile .btn {
+      width: 100%;
+      font-size: 1.1rem;
+      padding: 16px 0;
+   }
+}
+@media (max-width: 450px) {
+   html { font-size: 50%; }
+   .title { font-size: 2.2rem; }
+}
+
+/* --- Profile Dropdown Modern Pink Buttons (Header only) --- */
+.profile .option-btn, .profile .btn {
+   width: 90%;
+   margin: 16px auto 0 auto;
+   display: block;
+   background: #f4a9a9;
+   color: #fff;
+   font-weight: bold;
+   font-size: 1.3rem;
+   border: none;
+   border-radius: 40px;
+   padding: 22px 0;
+   text-align: center;
+   box-shadow: none;
+   transition: background 0.2s, color 0.2s, transform 0.1s;
+   outline: none;
+   letter-spacing: 0.5px;
+}
+.profile .option-btn:hover, .profile .btn:hover,
+.profile .option-btn:active, .profile .btn:active {
+   background: #e89c9c;
+   color: #fff;
+   transform: translateY(-2px) scale(1.02);
+}
+.profile img {
+   border: 4px solid #f4a9a9 !important;
+   margin-bottom: 18px;
+}
+.profile p {
+   font-family: 'Didot', serif;
+   font-size: 1.2rem;
+   color: #2c2c2c;
+   margin-bottom: 18px;
+   font-weight: 500;
+   text-transform: lowercase;
+}
+.profile .flex-btn {
+   flex-direction: column;
+   gap: 0;
+   margin-top: 0;
+}
+
+/* --- Restore Admin Panel Profile Dropdown Button Styles --- */
+.admin-header .profile .btn, .admin-header .profile .option-btn {
+   width: 100%;
+   margin: 10px 0 0 0;
+   display: block;
+   background: #b8860b;
+   color: #fff;
+   font-weight: bold;
+   font-size: 1.1rem;
+   border: none;
+   border-radius: 8px;
+   padding: 16px 0;
+   text-align: center;
+   box-shadow: none;
+   transition: background 0.2s, color 0.2s, transform 0.1s;
+   outline: none;
+   letter-spacing: 0.5px;
+}
+.admin-header .profile .btn:hover, .admin-header .profile .option-btn:hover,
+.admin-header .profile .btn:active, .admin-header .profile .option-btn:active {
+   background: #a5780a;
+   color: #fff;
+   transform: translateY(-2px) scale(1.01);
+}
+.admin-header .profile img {
+   border: 4px solid #f4a9a9 !important;
+   margin-bottom: 18px;
+}
+.admin-header .profile p {
+   font-family: 'Didot', serif;
+   font-size: 1.1rem;
+   color: #2c2c2c;
+   margin-bottom: 18px;
+   font-weight: 500;
+   text-transform: capitalize;
+}
+.admin-header .profile .flex-btn {
+   flex-direction: row;
+   gap: 10px;
+   margin-top: 0;
+}
+
+.update-profile {
+   max-width: 500px;
+   margin: 40px auto;
+   background: #fff;
+   border-radius: 18px;
+   box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+   padding: 40px 32px 32px 32px;
+}
+.update-profile .title {
+   font-family: 'Didot', serif;
+   font-size: 2.2rem;
+   color: #2c2c2c;
+   margin-bottom: 24px;
+   text-align: center;
+}
+.update-profile form {
+   gap: 24px;
+}
+.update-profile form img {
+   width: 110px;
+   height: 110px;
+   object-fit: cover;
+   border-radius: 50%;
+   border: 3px solid #f4a9a9;
+   margin: 0 auto 18px auto;
+   display: block;
+}
+.update-profile .inputBox {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+   margin-bottom: 10px;
+}
+.update-profile .inputBox span {
+   font-size: 1rem;
+   color: #666;
+   margin-bottom: 2px;
+   font-weight: 500;
+}
+.update-profile .inputBox .box {
+   padding: 12px 14px;
+   border-radius: 8px;
+   border: 1px solid #eee;
+   font-size: 1rem;
+   font-family: 'Montserrat', sans-serif;
+   background: #f9f5f0;
+   color: #2c2c2c;
+   transition: border 0.2s;
+}
+.update-profile .inputBox .box:focus {
+   border: 1.5px solid #f4a9a9;
+   outline: none;
+}
+.update-profile .flex-btn {
+   flex-direction: column;
+   gap: 16px;
+   margin-top: 18px;
+}
+.update-profile .btn, .update-profile .option-btn {
+   width: 100%;
+   padding: 14px 0 14px 0;
+   background: #2c2c2c;
+   color: #fff;
+   border: none;
+   border-radius: 6px;
+   font-size: 1.1rem;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+   transition: background 0.2s, color 0.2s;
+   box-shadow: none;
+   outline: none;
+   margin: 0;
+}
+.update-profile .btn i, .update-profile .option-btn i {
+   font-size: 1.2em;
+   margin-right: 8px;
+   vertical-align: middle;
+}
+.update-profile .btn:hover, .update-profile .btn:active,
+.update-profile .option-btn:hover, .update-profile .option-btn:active {
+   background: #f4a9a9;
+   color: #fff;
+}
+
+.footer{
+   background-color: var(--white);
+   border-top: var(--border);
+}
+
+.footer .box-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+   gap:3rem;
+   align-items: flex-start;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 5rem 2rem;
+}
+
+.footer .box-container .box h3{
+   color:var(--black);
+   margin-bottom: 2rem;
+   font-size: 2rem;
+   font-family: 'Didot', serif;
+   text-transform: none;
+   letter-spacing: 1px;
+}
+
+.footer .box-container .box a,
+.footer .box-container .box p{
+   display: block;
+   padding:1rem 0;
+   font-size: 1.6rem;
+   color:var(--light-color);
+}
+
+.footer .box-container .box a i,
+.footer .box-container .box p i{
+   color:var(--primary);
+   padding-right: 1rem;
+}
+
+.footer .box-container .box a:hover{
+   text-decoration: underline;
+   color:var(--primary);
+}
+
+.footer .credit{
+   margin-top: 2rem;
+   padding: 2rem 1.5rem;
+   padding-bottom: 2.5rem;
+   line-height: 1.5;
+   border-top: var(--border);
+   text-align: center;
+   font-size: 1.6rem;
+   color:var(--black);
+}
+
+.footer .credit span{
+   color:var(--primary);
+}
+
+#menu-btn{
+   display: none;
+}
+
+.header .flex{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding:2rem;
+   margin: 0 auto;
+   max-width: 1200px;
+   position: relative;
+}
+
+.header .flex .logo{
+   font-size: 2.5rem;
+   color:var(--black);
+   font-family: 'Didot', serif;
+}
+
+.header .flex .logo span{
+   color:var(--primary);
+}
+
+.header .flex .navbar a{
+   margin:0 1.5rem;
+   font-size: 1.6rem;
+   color:var(--light-color);
+   transition: all 0.3s ease;
+}
+
+.header .flex .navbar a:hover{
+   text-decoration: none;
+   color:var(--primary);
+}
+
+.header .flex .icons > *{
+   font-size: 2rem;
+   color:var(--light-color);
+   cursor: pointer;
+   margin-left: 1.5rem;
+   transition: all 0.3s ease;
+}
+
+.header .flex .icons > *:hover{
+   color:var(--primary);
+}
+
+.header .flex .icons a span,
+.header .flex .icons a i{
+   color:var(--light-color);
+}
+
+.header .flex .icons a:hover span,
+.header .flex .icons a:hover i{
+   color:var(--primary);
+}
+
+.header .flex .icons a span{
+   font-size: 1.6rem;
+}
+
+#menu-btn{
+   display: none;
+}
+
+.header .flex .profile{
+   position: absolute;
+   top:120%; right:2rem;
+   box-shadow: var(--box-shadow);
+   border:var(--border);
+   border-radius: 8px;
+   padding:2rem;
+   text-align: center;
+   background-color: var(--white);
+   width: 33rem;
+   display: none;
+   animation: fadeIn .2s linear;
+}
+
+.header .flex .profile.active{
+   display: inline-block;
+}
+
+.header .flex .profile img{
+   height: 12rem;
+   width: 12rem;
+   margin-bottom: 1rem;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 3px solid var(--primary);
+}
+
+.header .flex .profile p{
+   padding:.5rem 0;
+   font-size: 1.6rem;
+   color:var(--light-color);
+}
+
+@keyframes fadeIn {
+   0%{
+      transform: translateY(1rem);
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+
+.form-container{
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #f9f5f0;
+}
+
+.form-container form{
+   width: 50rem;
+   background-color: var(--white);
+   border-radius: 8px;
+   box-shadow: var(--box-shadow);
+   border:var(--border);
+   text-align: center;
+   padding:3rem;
+}
+
+.form-container form h3{
+   font-size: 2.5rem;
+   color:var(--black);
+   margin-bottom: 2rem;
+   text-transform: none;
+   font-family: 'Didot', serif;
+   letter-spacing: 1px;
+}
+
+.form-container form .box{
+   width: 100%;
+   margin:1rem 0;
+   border-radius: 8px;
+   border:var(--border);
+   padding:1.4rem 1.6rem;
+   font-size: 1.6rem;
+   color:var(--black);
+   background-color: var(--light-bg);
+   transition: all 0.3s ease;
+}
+
+.form-container form .box:focus {
+   border-color: var(--primary);
+   box-shadow: 0 0 0 3px rgba(244, 169, 169, 0.2);
+}
+
+.form-container form p{
+   margin-top: 2rem;
+   font-size: 1.6rem;
+   color:var(--light-color);
+}
+
+.form-container form p a{
+   color:var(--primary);
+   font-weight: 500;
+}
+
+.form-container form p a:hover{
+   text-decoration: underline;
+}
+
+@media (max-width:768px){
+   #menu-btn{
+      display: inline-block;
+   }
+
+   .header .flex .navbar{
+      border-top: var(--border);
+      border-bottom: var(--border);
+      background-color: var(--white);
+      position: absolute;
+      top:99%; left:0; right:0;
+      transition: .2s linear;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+   }
+
+   .header .flex .navbar.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header .flex .navbar a{
+      display: block;
+      margin:2rem;   
+   }
+
+   .update-profile form .flex{
+      flex-wrap: wrap;
+      gap:0;
+   }
+
+   .update-profile form .flex .inputBox{
+      width: 100%;
+   }
+}
+
+@media (max-width:450px){
+   html{
+      font-size: 50%;
+   }
+
+   .flex-btn{
+      flex-flow: column;
+      gap:0;
+   }
+
+   .title{
+      font-size: 3rem;
+   }
+   
+   .footer .box-container{
+      grid-template-columns: 1fr;
+   }
+}

@@ -1,0 +1,530 @@
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 5%;
+    background: linear-gradient(135deg, #f9f5f0 0%, #f0e6e6 100%);
+}
+
+.hero-content h1 {
+    font-family: 'Didot', serif;
+    font-size: 3.5rem;
+    color: #2c2c2c;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+.shop-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #f4a9a9;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.shop-btn:hover {
+    background: #f4a9a9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
+}
+
+.hero-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 50%;
+}
+
+.hero-images img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.hero-images img:hover {
+    transform: scale(1.03);
+}
+
+/* Services Section */
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 60px 5%;
+    background: white;
+    text-align: center;
+    gap: 30px;
+}
+
+.service {
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+.service i {
+    font-size: 2.5rem;
+    color: #f4a9a9;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-family: 'Didot', serif;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service p {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Featured Products Section */
+.featured-section {
+    padding: 80px 5%;
+    background: #f9f5f0;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-family: 'Didot', serif;
+    font-size: 2.5rem;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 10px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.section-header .subtext {
+    color: #888;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto 40px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #f4a9a9;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.03);
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-info h3 {
+    font-family: 'Didot', serif;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.price {
+    color: #f4a9a9;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Quantity Container */
+.quantity-container {
+    margin: 10px 0;
+}
+
+/* Unified style for both wishlist and add-to-cart buttons */
+.wishlist-btn, .add-to-cart {
+    width: 100%;
+    padding: 12px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    display: block; /* Ensure proper button rendering */
+    margin: 0 auto; /* Center the button */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    -webkit-appearance: none; /* Remove default button styling */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.wishlist-btn:hover, .add-to-cart:hover {
+    background: #f4a9a9;
+}
+
+/* Ensure the icon in wishlist button aligns properly */
+.wishlist-btn i {
+    margin-right: 8px;
+    vertical-align: middle; /* Align icon with text */
+}
+
+/* Style for product-buttons container */
+.product-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Ensure full width */
+}
+
+/* Style for quantity input */
+.product-info input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    display: block; /* Ensure it behaves as a block element */
+}
+
+/* Prevent input-like appearance on buttons within forms */
+.product-card form button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-card form {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* View Button (for View All Collections) */
+.view-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #f4a9a9 0%, #e07a7a 100%); /* Gradient for depth */
+    color: white;
+    text-decoration: none;
+    font-family: 'Didot', serif; /* Match elegant typography */
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(244, 169, 169, 0.4); /* Subtle shadow */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Slight border for definition */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.view-btn:hover {
+    background: linear-gradient(135deg, #e07a7a 0%, #f4a9a9 100%); /* Reverse gradient on hover */
+    transform: translateY(-3px) scale(1.02); /* Lift and slight scale */
+    box-shadow: 0 6px 20px rgba(224, 122, 122, 0.5); /* Enhanced shadow */
+    color: white; /* Ensure text readability */
+}
+
+.view-btn:active {
+    transform: translateY(0); /* Press effect */
+    box-shadow: 0 2px 10px rgba(224, 122, 122, 0.3); /* Reduced shadow */
+}
+
+/* Responsive Adjustments for View Button */
+@media (max-width: 768px) {
+    .view-btn {
+        padding: 12px 30px; /* Smaller padding on tablet */
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .view-btn {
+        padding: 10px 25px; /* Even smaller on mobile */
+        font-size: 0.85rem;
+    }
+}
+
+/* ... (keep all existing styles below this point unchanged) ... */
+/* Collections Section */
+.collections-section {
+    padding: 80px 5%;
+    background: white;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-family: 'Didot', serif;
+    font-size: 2.5rem;
+    color: #2c2c2c;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.collection-card {
+    position: relative;
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.collection-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.collection-card:hover .collection-image {
+    transform: scale(1.05);
+}
+
+.collection-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+    padding: 30px;
+    color: white;
+    text-align: left;
+}
+
+.collection-overlay h3 {
+    font-family: 'Didot', serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.collection-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.collection-link:after {
+    content: '→';
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.collection-link:hover {
+    color: #f4a9a9;
+}
+
+.collection-link:hover:after {
+    transform: translateX(5px);
+}
+
+.section-footer {
+    margin-top: 50px;
+}
+
+/* Premium Collection Section */
+.premium-collection {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.premium-content {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    padding: 0 5%;
+    color: white;
+    text-align: left;
+}
+
+.premium-content h2 {
+    font-family: 'Didot', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.premium-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+}
+
+/* CTA Button (reusable) */
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #f4a9a9;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #f4a9a9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .collections-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+    
+    .premium-collection {
+        height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .collections-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .collection-card {
+        height: 350px;
+    }
+    
+    .premium-collection {
+        height: 400px;
+        flex-direction: column;
+    }
+    
+    .premium-content {
+        width: 100%;
+        padding: 40px 5%;
+        text-align: center;
+    }
+    
+    .premium-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header h2,
+    .premium-content h2 {
+        font-size: 2rem;
+    }
+    
+    .collection-overlay h3 {
+        font-size: 1.5rem;
+    }
+}
