@@ -3,8 +3,8 @@
 Welcome to the backend repository for **Aura & Co.**, the modern jewelry e-commerce platform. This backend powers the secure, dynamic, and feature-rich experience of the Aura & Co. web application, handling everything from user authentication to product management and order processing.
 
 ---
-![Alt text](Screenshot 2025-07-02 002122)
-
+![Image](https://github.com/user-attachments/assets/d47b7f12-de31-4758-904a-2da4708966fe)
+---
 ## 🌟 Key Features
 
 The backend is designed to provide robust, secure, and scalable support for the frontend, with a focus on seamless integration and efficient management.
