@@ -12,7 +12,7 @@ The backend is designed to provide robust, secure, and scalable support for the 
 - **🔒 User Authentication & Session Management**
   - Secure registration and login for both users and admins
   - Session-based authentication with role-based access (user/admin)
-  - Passwords stored using MD5 hashing (for production, consider bcrypt/argon2)
+  - Passwords stored using MD5 hashing
 
 - **🛍️ Product & Inventory Management**
   - Admin panel for adding, updating, and deleting products
