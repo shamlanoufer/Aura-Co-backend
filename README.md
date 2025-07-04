@@ -125,4 +125,4 @@ The backend uses a MySQL database (`aura_co_db`) with the following key tables:
 
 ---
 
-#myAura
+#myAura!
