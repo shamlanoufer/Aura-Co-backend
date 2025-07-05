@@ -74,8 +74,8 @@ The backend uses a MySQL database (`aura_co_db`) with the following key tables:
 ### Prerequisites
 
 - **PHP 7+**
-- **MySQL** (or compatible database server)
-- **Web server** (e.g., Apache, Nginx, or XAMPP for local development)
+- **MySQL** 
+- **Web server** (XAMPP)
 
 ### Installation
 
